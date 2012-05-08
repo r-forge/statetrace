@@ -460,6 +460,8 @@ staManage <- function(stanames="",staname=stanames[1],
     class(sta)="sta"
   } else if (checkConverge) {
     sta=stas[[1]]
+    if (!any(installed.packages()[,1]=="coda"))
+      stop("Requires coda package")
     require(coda)
     lmcmcl=lapply(sta$ss,getmcmcl,nmcmc=nmcmc)
     cat("\nGelman Diagnostic for Convergence (multivariate)\n")
@@ -2026,6 +2028,8 @@ stPlot=function(bosname="",
                  c(dns$x1[mod],dns$x2[div+1])
     }
 
+    if (!any(installed.packages()[,1]=="KernSmooth"))
+      stop("Requires KernSmooth package")
     require(KernSmooth)
     nt=dim(samp)[1]; nd=dim(samp)[2]
     smth=0
@@ -2094,6 +2098,8 @@ stPlot=function(bosname="",
     # Main body of plotsamp
     nt=dim(samp)[1]; nd=dim(samp)[2]
     if ( preg ) {
+      if (!any(installed.packages()[,1]=="KernSmooth"))
+        stop("Requires KernSmooth package")
       require(KernSmooth)
       smth=0
       for (i in 1:nt) for (j in 1:nd) for (k in 1:2) {
@@ -2354,6 +2360,8 @@ stFirst=function(staname="",fnams=NULL,folder="",extension="txt",
 ################################################################################
 
 guistFirst <- function() {
+  if (!any(installed.packages()[,1]=="fgui"))
+      stop("Requires fgui package")
   require(fgui)
   guiSet("ENTRY_WIDTH",20)
   guiSet("LIST_WIDTH",15)
@@ -2386,6 +2394,8 @@ staMake_press=function() {
 
 # gui for subsequent passes of boast
 guistSample <- function() {
+  if (!any(installed.packages()[,1]=="fgui"))
+      stop("Requires fgui package")
   require(fgui)
   guiSet("ENTRY_WIDTH",20)
   guiSet("SLIDER_LENGTH",150)
@@ -2417,6 +2427,8 @@ guistSample <- function() {
 
 # gui for summary statistics
 guistSummary=function() {
+  if (!any(installed.packages()[,1]=="fgui"))
+      stop("Requires fgui package")
   require(fgui)
   guiSet("ENTRY_WIDTH",20)
   guiSet("LIST_WIDTH",50)
@@ -2464,6 +2476,8 @@ stSummary_press=function() {
 
 # gui for stProbplot
 guistProbplot=function() {
+  if (!any(installed.packages()[,1]=="fgui"))
+      stop("Requires fgui package")
   require(fgui)
   guiSet("SLIDER_LENGTH",200)
   guiSet("ENTRY_WIDTH",30)
@@ -2523,6 +2537,8 @@ stProbplot_press=function() {
 
 # gui for stBootav
 guistBootav=function() {
+  if (!any(installed.packages()[,1]=="fgui"))
+      stop("Requires fgui package")
   require(fgui)
   guiSet("ENTRY_WIDTH",20)
   guiv(stBootav,
@@ -2543,6 +2559,8 @@ guistBootav=function() {
 
 # gui for stPlot
 guistPlot=function() {
+  if (!any(installed.packages()[,1]=="fgui"))
+      stop("Requires fgui package")
   require(fgui)
   guiSet("SLIDER_LENGTH",200)
   guiSet("ENTRY_WIDTH",30)
@@ -2620,6 +2638,8 @@ stPlot_press=function() {
 
 # gui for staManage
 guistaManage=function() {
+  if (!any(installed.packages()[,1]=="fgui"))
+      stop("Requires fgui package")
   require(fgui)
   guiSet("ENTRY_WIDTH",20)
   guiv(staManage,
@@ -2653,6 +2673,8 @@ stacallback=function(arg) {
 }
 
 guista=function() {
+  if (!any(installed.packages()[,1]=="fgui"))
+      stop("Requires fgui package")
   require(fgui)
   guiv(sta,title="Select option",
   argText=c(stFirst="stFirst: Generate sta object and run first pass of sampling",

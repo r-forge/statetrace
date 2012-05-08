@@ -1,8 +1,8 @@
 Package: StateTrace
 Type: Package
 Title: Bayesian Ordinal Analysis for State Trace Designs
-Version: 1.0-4
-Date: 2012-05-04
+Version: 1.0-4b
+Date: 2012-08-05
 Author: Melissa Prince, Guy Hawkins, Jonathon Love, Andrew Heathcote
 Maintainer: David Elliott <David.Elliott@newcastle.edu.au>
 Description: StateTrace automates many aspects of a state-trace
@@ -16,6 +16,5 @@ License: GPL (>= 2)
 LazyLoad: yes
 Depends: KernSmooth, coda, fgui
 URL: http://www.newcl.org/?q=node/5
-Packaged: 2012-05-04 07:41:47 UTC; jonathon
+Packaged: 2012-08-05 07:41:47 UTC; richard
 Repository: CRAN
-Date/Publication: 2012-05-04 09:47:35
