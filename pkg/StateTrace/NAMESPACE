@@ -1,0 +1,22 @@
+
+import(fgui, coda, KernSmooth)
+
+export(
+	guista,
+	staMake,
+	stFirst,
+	guistFirst,
+	stSample,
+	guistSample,
+	stSummary,
+	guistSummary,
+	stProbplot,
+	guistProbplot,
+	stBootav,
+	guistBootav,
+	stPlot,
+	guistPlot,
+	staManage,
+	guistaManage)
+	
+	

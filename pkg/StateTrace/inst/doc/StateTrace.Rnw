@@ -1,0 +1,6 @@
+%\VignetteIndexEntry{StateTrace}
+
+\documentclass{article}
+\begin{document}
+\end{document}
+

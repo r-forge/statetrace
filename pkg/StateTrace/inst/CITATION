@@ -1,0 +1,17 @@
+citHeader("To cite StateTrace in publications use:")
+
+citEntry(entry = "Article",
+  title        = "An R package for state-trace analysis",
+  author       = personList(as.person("Melissa Prince"),
+                            as.person("Guy Hawkins"),
+		                    as.person("Jonathon Love"),
+		                    as.person("Andrew Heathcote")),
+  journal      = "Manuscript submitted for publication",
+  year         = "2011",
+  
+
+  textVersion  =
+  paste("Melissa Prince, Guy Hawkins, Jonathon Love, & Andrew Heathcote (2011).",
+        "An R package for state-trace analysis.",
+        "Manuscript submitted for publication.")
+)
